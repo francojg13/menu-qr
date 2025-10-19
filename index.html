@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Menú digital">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <title>Menu QR</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <!-- Logo y nombre -->
+            <div class="header-brand">
+                <img src="./img/Logo_505Makers_v1.png" alt="505 Makers Logo" class="header-logo">
+                <h1 class="header-title">505 Makers</h1>
+            </div>
+
+            <!-- Información de contacto -->
+            <div class="header-info">
+                <div class="contact-group">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Diego de Rojas 421, Famaillá</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+54 9 381 418841</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>505makers@gmail.com</span>
+                    </div>
+                </div>
+                <div class="social-group">
+                    <span class="social-label">Seguinos en nuestras redes</span>
+                    <div class="social-links-row">
+                        <a href="https://wa.me/549381418841" target="_blank" aria-label="WhatsApp" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.instagram.com/505makers/" target="_blank" aria-label="Instagram" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- BUSCADOR Y NAVEGACIÓN -->
+    <div class="search-nav-section">
+        <!-- Buscador -->
+        <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" class="search-input" placeholder="Buscar productos por nombre">
+        </div>
+
+        <!-- NAVEGACIÓN DE CATEGORÍAS -->
+        <nav class="categories-nav">
+            <a href="#calientes" class="category-item">
+                <div class="category-icon-circle">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <span class="category-name">Calientes</span>
+            </a>
+            <a href="#frias" class="category-item">
+                <div class="category-icon-circle">
+                    <i class="fas fa-snowflake"></i>
+                </div>
+                <span class="category-name">Frías</span>
+            </a>
+            <a href="#desayunos" class="category-item">
+                <div class="category-icon-circle">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <span class="category-name">Desayunos</span>
+            </a>
+            <a href="#dulces" class="category-item">
+                <div class="category-icon-circle">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <span class="category-name">Dulces</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="container">
+        <!-- BEBIDAS CALIENTES -->
+        <section id="calientes" class="category-section">
+            <div class="category-header">
+                <h2 class="category-title">Bebidas Calientes</h2>
+            </div>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Café Americano</h3>
+                        <span class="item-price">$1,500</span>
+                    </div>
+                    <p class="item-description">Café de filtro suave y aromático</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Capuchino</h3>
+                        <span class="item-price">$2,000</span>
+                    </div>
+                    <p class="item-description">Espresso con espuma de leche cremosa</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Latte</h3>
+                        <span class="item-price">$2,200</span>
+                    </div>
+                    <p class="item-description">Espresso con leche vaporizada y arte latte</p>
+                    <div class="item-tags">
+                        <span class="tag">Popular</span>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Flat White</h3>
+                        <span class="item-price">$2,300</span>
+                    </div>
+                    <p class="item-description">Doble espresso con microespuma de leche</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Té Premium</h3>
+                        <span class="item-price">$1,200</span>
+                    </div>
+                    <p class="item-description">Variedad de tés: negro, verde, rojo, herbal</p>
+                    <div class="item-tags">
+                        <span class="tag vegan">Vegano</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BEBIDAS FRÍAS -->
+        <section id="frias" class="category-section">
+            <div class="category-header">
+                <h2 class="category-title">Bebidas Frías</h2>
+            </div>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Cold Brew</h3>
+                        <span class="item-price">$2,500</span>
+                    </div>
+                    <p class="item-description">Café de extracción en frío, suave y refrescante</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Frappé</h3>
+                        <span class="item-price">$2,800</span>
+                    </div>
+                    <p class="item-description">Café batido con hielo y crema</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Smoothie de Frutas</h3>
+                        <span class="item-price">$2,500</span>
+                    </div>
+                    <p class="item-description">Frutillas, banana, mango o mix tropical</p>
+                    <div class="item-tags">
+                        <span class="tag vegetarian">Vegetariano</span>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Limonada Artesanal</h3>
+                        <span class="item-price">$1,800</span>
+                    </div>
+                    <p class="item-description">Con jengibre, menta o frutos rojos</p>
+                    <div class="item-tags">
+                        <span class="tag vegan">Vegano</span>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Jugo Natural</h3>
+                        <span class="item-price">$2,000</span>
+                    </div>
+                    <p class="item-description">Naranja, pomelo o zanahoria</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DESAYUNOS Y MERIENDAS -->
+        <section id="desayunos" class="category-section">
+            <div class="category-header">
+                <h2 class="category-title">Desayunos & Meriendas</h2>
+            </div>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Tostadas con Palta</h3>
+                        <span class="item-price">$3,500</span>
+                    </div>
+                    <p class="item-description">Pan integral, palta, tomate cherry y huevo poché</p>
+                    <div class="item-tags">
+                        <span class="tag vegetarian">Vegetariano</span>
+                        <span class="tag">Popular</span>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Medialunas</h3>
+                        <span class="item-price">$800</span>
+                    </div>
+                    <p class="item-description">De manteca o grasa (precio por unidad)</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Sándwich de Jamón Crudo</h3>
+                        <span class="item-price">$4,200</span>
+                    </div>
+                    <p class="item-description">Jamón crudo, rúcula, tomate y queso</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Tostado Triple</h3>
+                        <span class="item-price">$3,800</span>
+                    </div>
+                    <p class="item-description">Jamón, queso y tomate</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Bowl de Yogurt</h3>
+                        <span class="item-price">$3,200</span>
+                    </div>
+                    <p class="item-description">Yogurt griego, granola, frutas y miel</p>
+                    <div class="item-tags">
+                        <span class="tag vegetarian">Vegetariano</span>
+                        <span class="tag new">Nuevo</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DULCES -->
+        <section id="dulces" class="category-section">
+            <div class="category-header">
+                <h2 class="category-title">Dulces & Postres</h2>
+            </div>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Cheesecake</h3>
+                        <span class="item-price">$3,500</span>
+                    </div>
+                    <p class="item-description">Frutos rojos, dulce de leche o maracuyá</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Brownie con Helado</h3>
+                        <span class="item-price">$3,200</span>
+                    </div>
+                    <p class="item-description">Brownie tibio con helado de vainilla</p>
+                    <div class="item-tags">
+                        <span class="tag">Popular</span>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Lemon Pie</h3>
+                        <span class="item-price">$2,800</span>
+                    </div>
+                    <p class="item-description">Tarta de limón con merengue italiano</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Muffins</h3>
+                        <span class="item-price">$1,500</span>
+                    </div>
+                    <p class="item-description">Chips de chocolate, arándanos o banana</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Cookies</h3>
+                        <span class="item-price">$1,200</span>
+                    </div>
+                    <p class="item-description">Cookies artesanales (precio por 3 unidades)</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- BOTÓN FLOTANTE WHATSAPP -->
+    <a href="https://wa.me/549381418841?text=Hola!%20Quiero%20hacer%20un%20pedido" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- FOOTER -->
+    <footer>
+        <h3>¡Hacé tu pedido!</h3>
+        <div class="social-links">
+            <a href="https://instagram.com/505makers" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://facebook.com/505makers" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://wa.me/5493814123456" target="_blank" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+
+        <div class="footer-info">
+            <p><i class="fas fa-map-marker-alt"></i> Diego de Rojas 421, Famaillá</p>
+            <p><i class="fas fa-clock"></i> Lunes a Sábado: 8:00 - 22:00</p>
+            <p><i class="fas fa-phone"></i> WhatsApp: +54 9 381 418841</p>
+        </div>
+
+        <div class="credits">
+            <p>Menú digital by <a href="https://www.instagram.com/505makers/" target="_blank">505 Makers</a></p>
+            <p><i class="fas fa-code"></i> Tecnología para emprender y crecer</p>
+        </div>
+    </footer>
+    <script src="./js/main.js"></script>
+</body>
+</html>

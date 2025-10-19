@@ -1,0 +1,212 @@
+/* ===== RESPONSIVE ===== */
+        @media (max-width: 1200px) {
+            .header-container {
+                padding: 0 30px;
+                gap: 25px;
+            }
+
+            .header-title {
+                font-size: 32px;
+            }
+
+            .header-logo {
+                width: 90px;
+                height: 90px;
+            }
+
+            .contact-item {
+                font-size: 13px;
+            }
+
+            .social-label {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .header-container {
+                padding: 0 25px;
+                gap: 20px;
+            }
+
+            .header-title {
+                font-size: 28px;
+            }
+
+            .header-logo {
+                width: 80px;
+                height: 80px;
+            }
+
+            .header-info {
+                gap: 20px;
+            }
+
+            .contact-item {
+                font-size: 12px;
+            }
+
+            .social-group {
+                padding-left: 20px;
+            }
+
+            .search-nav-section {
+                padding: 20px 25px;
+            }
+
+            .categories-nav {
+                gap: 30px;
+            }
+
+            .category-icon-circle {
+                width: 90px;
+                height: 90px;
+            }
+
+            .category-icon-circle i {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                min-height: 320px;
+            }
+
+            .header-container {
+                flex-direction: column;
+                padding: 15px 20px;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .header-brand {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .header-logo {
+                width: 80px;
+                height: 80px;
+            }
+
+            .header-title {
+                font-size: 26px;
+            }
+
+            .header-info {
+                flex-direction: column;
+                width: 100%;
+                gap: 15px;
+            }
+
+            .contact-group {
+                align-items: center;
+            }
+
+            .social-group {
+                border-left: none;
+                border-top: 1px solid var(--primary-color);
+                padding-left: 0;
+                padding-top: 15px;
+                align-items: center;
+            }
+
+            .category-title {
+                font-size: 24px;
+            }
+
+            .category-icon {
+                font-size: 28px;
+            }
+
+            .item-name {
+                font-size: 18px;
+            }
+
+            .item-price {
+                font-size: 20px;
+            }
+
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 55px;
+                height: 55px;
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                min-height: 280px;
+            }
+
+            .header-container {
+                padding: 12px 15px;
+            }
+
+            .header-logo {
+                width: 70px;
+                height: 70px;
+            }
+
+            .header-title {
+                font-size: 22px;
+            }
+
+            .contact-item {
+                font-size: 11px;
+            }
+
+            .contact-item i {
+                font-size: 14px;
+            }
+
+            .social-group .social-link {
+                width: 32px;
+                height: 32px;
+            }
+
+            .social-group .social-link i {
+                font-size: 16px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .menu-item {
+                padding: 15px;
+            }
+
+            .search-nav-section {
+                padding: 20px 15px;
+            }
+
+            .search-container {
+                margin-bottom: 25px;
+            }
+
+            .search-input {
+                padding: 12px 15px 12px 45px;
+                font-size: 14px;
+            }
+
+            .categories-nav {
+                gap: 20px;
+            }
+
+            .category-icon-circle {
+                width: 70px;
+                height: 70px;
+            }
+
+            .category-icon-circle i {
+                font-size: 28px;
+            }
+
+            .category-name {
+                font-size: 14px;
+            }
+        }
