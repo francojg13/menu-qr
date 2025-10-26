@@ -22,6 +22,8 @@
             <div class="header-brand">
                 <img src="./img/Logo_505Makers_v1.png" alt="505 Makers Logo" class="header-logo">
                 <h1 class="header-title">505 Makers</h1>
+                <!-- Botón para abrir el drawer/contacto (visible en móvil y escritorio) -->
+                <button class="btn-ver-mas" aria-controls="contact-drawer" aria-expanded="false">Ver más</button>
             </div>
 
             <!-- Información de contacto -->
@@ -341,6 +343,35 @@
             <p><i class="fas fa-code"></i> Tecnología para emprender y crecer</p>
         </div>
     </footer>
+
+    <!-- CONTACT DRAWER / BOTTOM SHEET -->
+    <div class="drawer-overlay" id="drawer-overlay" hidden></div>
+    <aside class="drawer" id="contact-drawer" role="dialog" aria-modal="true" aria-hidden="true" hidden>
+        <div class="drawer-header">
+            <div class="drawer-title">
+                <img src="./img/Logo_505Makers_v1.png" alt="505 Makers" class="drawer-logo">
+                <div>
+                    <strong>505 Makers</strong>
+                    <div class="drawer-sub"></div>
+                </div>
+            </div>
+            <button class="drawer-close" aria-label="Cerrar">&times;</button>
+        </div>
+
+        <div class="drawer-body">
+            <p><i class="fas fa-map-marker-alt"></i> Diego de Rojas 421, Famaillá</p>
+            <p><i class="fas fa-phone"></i> +54 9 381 418841</p>
+            <p><i class="fas fa-envelope"></i> 505makers@gmail.com</p>
+
+            <div class="drawer-social">
+                <span>Nuestros canales de contacto</span>
+                <div class="drawer-social-links">
+                    <a href="https://wa.me/549381418841" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/505makers/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </aside>
     <script src="./js/main.js"></script>
 </body>
 </html>

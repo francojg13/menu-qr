@@ -39,8 +39,19 @@
             justify-content: space-between;
             align-items: center;
             gap: 30px;
-            background: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.75) 100%);
+            /* gradient moved to header::before so it covers the full header background */
+            background: transparent;
+            position: relative;
+            z-index: 1;
         }
+
+        /* For wide screens, keep the original gradient in the header container so desktop layout is unchanged */
+        .header-container {
+            /* default: transparent so small-screen overlay (header::before) is the only gradient */
+            background: transparent;
+        }
+        /* On small screens we apply a full-cover overlay using header::before to ensure no part of the image escapes the gradient */
+        header { position: relative; }
 
         /* Logo y nombre */
         .header-brand {
@@ -498,6 +509,105 @@
             margin-right: 5px;
         }
 
+        /* ===== CONTACT DRAWER / BOTTOM SHEET ===== */
+        .btn-ver-mas {
+            margin-left: 16px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 2px solid var(--primary-color);
+            background: var(--white);
+            color: var(--secondary-color);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            /* Hidden by default on wide screens; visible on small screens via media query below */
+            display: none;
+        }
+        .btn-ver-mas:hover { transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0,0,0,0.08); }
+
+        .drawer-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.4);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.25s ease;
+            z-index: 1000;
+        }
+
+        .drawer {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--white);
+            border-top-left-radius: 14px;
+            border-top-right-radius: 14px;
+            box-shadow: 0 -8px 30px rgba(0,0,0,0.2);
+            max-height: 80vh;
+            transform: translateY(110%);
+            transition: transform 0.28s cubic-bezier(.2,.8,.2,1);
+            z-index: 1001;
+            padding: 18px 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .drawer.open { transform: translateY(0); }
+        .drawer-overlay.open { opacity: 1; visibility: visible; }
+
+        .drawer-header { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+        .drawer-title { display:flex; align-items:center; gap:10px; }
+        .drawer-logo { width:48px; height:48px; border-radius:50%; object-fit:cover; }
+        .drawer-close { background:transparent; border:none; font-size:24px; cursor:pointer; color:var(--text-dark); }
+        .drawer-body { margin-top:12px; color:var(--text-dark); }
+        .drawer-body p { margin:10px 0; display:flex; gap:10px; align-items:center; }
+        .drawer-social { margin-top:12px; }
+        .drawer-social-links { display:flex; gap:12px; margin-top:8px; }
+        .drawer-social-links a { width:44px; height:44px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; background:var(--bg-light); color:var(--secondary-color); text-decoration:none; box-shadow:0 2px 8px rgba(0,0,0,0.08);} 
+
+        /* On wider screens, present as right-side drawer */
+        @media(min-width:800px) {
+            .drawer {
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: auto;
+                width: 360px;
+                border-radius: 0 0 0 0;
+                transform: translateX(110%);
+            }
+            .drawer.open { transform: translateX(0); }
+            /* Apply header gradient only on wide screens to preserve original desktop look */
+            .header-container {
+                background: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.75) 100%);
+            }
+        }
+
+        /* Small screens: show the Ver más button and hide header contact info to avoid redundancy */
+        @media(max-width:799px) {
+            .btn-ver-mas { display: inline-block; }
+            /* Hide the full header contact block on small screens; contact will be in the drawer */
+            .header-info { display: none; }
+            /* Slightly reduce header padding on small screens */
+            .header-container { padding: 12px 18px; }
+            /* Make header a flexbox and ensure the container fills the header so children can be vertically centered */
+            header { display: flex; align-items: center; justify-content: center; }
+            .header-container { height: 100%; display: flex; flex-direction: column; justify-content: center; }
+            /* Center the brand content and stack vertically for perfect alignment */
+            .header-brand { flex-direction: column; align-items: center; gap: 8px; }
+            .header-title { margin: 0; }
+            .btn-ver-mas { margin: 6px 0 0 0; }
+            /* Ensure the gradient overlay fully covers the header image on small screens */
+            header::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.75) 100%);
+                pointer-events: none;
+                z-index: 0;
+            }
+        }
         /* ===== ANIMACIONES ===== */
         @keyframes fadeInDown {
             from {

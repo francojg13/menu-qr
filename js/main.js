@@ -82,3 +82,45 @@
                 });
             });
         }
+
+                // Drawer / bottom-sheet de contacto (Ver más)
+                (function() {
+                    const openBtn = document.querySelector('.btn-ver-mas');
+                    const drawer = document.getElementById('contact-drawer');
+                    const overlay = document.getElementById('drawer-overlay');
+                    const closeBtn = drawer ? drawer.querySelector('.drawer-close') : null;
+
+                    function openDrawer() {
+                        if (!drawer || !overlay) return;
+                        drawer.hidden = false;
+                        overlay.hidden = false;
+                        requestAnimationFrame(() => {
+                            drawer.classList.add('open');
+                            overlay.classList.add('open');
+                            drawer.setAttribute('aria-hidden', 'false');
+                            openBtn && openBtn.setAttribute('aria-expanded', 'true');
+                        });
+                    }
+
+                    function closeDrawer() {
+                        if (!drawer || !overlay) return;
+                        drawer.classList.remove('open');
+                        overlay.classList.remove('open');
+                        drawer.setAttribute('aria-hidden', 'true');
+                        openBtn && openBtn.setAttribute('aria-expanded', 'false');
+                        // wait for transition then hide
+                        setTimeout(() => {
+                            drawer.hidden = true;
+                            overlay.hidden = true;
+                        }, 300);
+                    }
+
+                    if (openBtn) openBtn.addEventListener('click', openDrawer);
+                    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+                    if (overlay) overlay.addEventListener('click', closeDrawer);
+
+                    // Close on Escape
+                    document.addEventListener('keydown', (e) => {
+                        if (e.key === 'Escape') closeDrawer();
+                    });
+                })();
